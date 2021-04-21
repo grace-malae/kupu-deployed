@@ -4,29 +4,29 @@ import { screen, render } from '@testing-library/react'
 
 import App from './App'
 import store from '../store'
-import { fetchFruits } from '../actions'
+import { fetchWords } from '../actions'
 
 jest.mock('../actions')
 
-fetchFruits.mockImplementation(() => () => {})
+fetchWords.mockImplementation(() => () => {})
 
-test('page header includes fruit', () => {
+test('page header includes word', () => {
   render(<Provider store={store}><App /></Provider>)
   const heading = screen.getByRole('heading')
-  expect(heading.innerHTML).toMatch(/Fruit/)
+  expect(heading.innerHTML).toMatch(/Word/)
 })
 
-test('renders an <li> for each fruit', () => {
-  const fruits = ['orange', 'persimmons', 'kiwi fruit']
+test('renders an <li> for each word', () => {
+  const words = ['orange', 'persimmons', 'kiwi word']
   jest.spyOn(store, 'getState')
-  store.getState.mockImplementation(() => ({ fruits }))
+  store.getState.mockImplementation(() => ({ words }))
 
   render(<Provider store={store}><App /></Provider>)
   const li = screen.getAllByRole('listitem')
   expect(li).toHaveLength(3)
 })
 
-test('dispatches fetchFruits action', () => {
+test('dispatches fetchWords action', () => {
   render(<Provider store={store}><App /></Provider>)
-  expect(fetchFruits).toHaveBeenCalled()
+  expect(fetchWords).toHaveBeenCalled()
 })
