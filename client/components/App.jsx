@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-
 import { fetchWords } from '../actions'
+
+import Header from './Header'
+import Main from './Main'
+import Footer from './Footer'
 
 function App (props) {
   useEffect(() => {
@@ -11,12 +14,9 @@ function App (props) {
   return (
     <>
       <div className='app'>
-        <h1>Fullstack Boilerplate - with Words!</h1>
-        <ul>
-          {props.words.map(word => (
-            <li key={word}>{word}</li>
-          ))}
-        </ul>
+        <Header />
+        <Main />
+        <Footer />
       </div>
     </>
   )
