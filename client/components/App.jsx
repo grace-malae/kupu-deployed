@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { fetchWords } from '../actions'
 
 import Header from './Header'
-import Main from './Main'
+import WordOfDay from './WordOfDay'
+import Form from './Form'
 import Footer from './Footer'
 
 function App (props) {
@@ -15,7 +16,8 @@ function App (props) {
     <>
       <div className='app'>
         <Header />
-        <Main />
+        <WordOfDay />
+        <Form />
         <Footer />
       </div>
     </>
