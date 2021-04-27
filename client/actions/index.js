@@ -1,4 +1,4 @@
-import { getWords } from '../apis/words'
+import { getWords } from '../apis/words.js'
 
 export const SET_WORDS = 'SET_WORDS'
 

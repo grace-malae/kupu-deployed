@@ -4,7 +4,7 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex('words').insert([
-        { id: 1, word: 'mōrena', pronounciation: '(maaw-reh-nah)', definition: 'good morning.' },
+        { id: 1, word: 'mōrena', pronounciation: '(maaw-reh-nuh)', definition: 'good morning.' },
         { id: 2, word: 'taonga', pronounciation: '(tah-aw-nga)', definition: 'treasure, prized possession.' },
         { id: 3, word: 'moni', pronounciation: '(maw-knee)', definition: 'money' },
         { id: 4, word: 'hui', pronounciation: '(who-ee)', definition: 'to gather, assemble, a meeting' },
@@ -18,10 +18,10 @@ exports.seed = function (knex) {
         { id: 12, word: 'pātai', pronounciation: '(paah-tie)', definition: 'question' },
         { id: 13, word: 'wānanga', pronounciation: '(waah-nah-nga)', definition: 'a place of learning' },
         { id: 14, word: 'maunga', pronounciation: '(mow-nga)', definition: 'mountain' },
-        { id: 15, word: 'awa', pronounciation: '(ah-wah)', definition: 'river' },
+        { id: 15, word: 'awa', pronounciation: '(uh-wuh)', definition: 'river' },
         { id: 16, word: 'roto', pronounciation: '(raw-taw)', definition: 'lake' },
         { id: 17, word: 'noho', pronounciation: '(naw-haw)', definition: 'stay, sit, live' },
-        { id: 18, word: 'moana', pronounciation: '(maw-ah-nah)', definition: 'sea, ocean' },
+        { id: 18, word: 'moana', pronounciation: '(maw-uh-nuh)', definition: 'sea, ocean' },
         { id: 19, word: 'mihi', pronounciation: '(me-he)', definition: 'to greet' },
         { id: 20, word: 'hīkoi', pronounciation: '(he-koy)', definition: 'walk' },
         { id: 21, word: 'menemene', pronounciation: '(meh-neh-meh-neh)', definition: 'smile' },

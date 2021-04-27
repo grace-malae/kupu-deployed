@@ -9,7 +9,7 @@ import Footer from './Footer'
 
 function App (props) {
   useEffect(() => {
-    props.dispatch(fetchWords())
+    fetchWords(props.dispatch)
   }, [])
 
   return (
