@@ -1,5 +1,6 @@
 {
-  "name": "boilerplate-fullstack",
+  "homepage": "http://grace-malae.github.io/kupu",
+  "name": "kupu",
   "version": "2.0.0",
   "main": "server/index.js",
   "license": "MIT",
@@ -10,15 +11,15 @@
     "start": "node server",
     "test": "jest",
     "test:watch": "jest --noStackTrace --watchAll",
-    "dev": "run-p dev:client dev:server",
+    "dev": "run-p dev:client",
     "dev:client": "npm run webpack -- --watch",
     "dev:server": "nodemon --watch server server/index.js",
-    "build": "run-p build:client build:server",
+    "build": "run-p build:client",
     "build:client": "npm run webpack -- --mode production",
-    "build:server": "npm run knex -- migrate:latest",
     "lint": "eslint --ext .js,.jsx .",
     "webpack": "webpack --config ./client/webpack.config.js",
-    "knex": "knex --knexfile ./server/db/knexfile.js"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "babel": {
     "presets": [

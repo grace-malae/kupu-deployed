@@ -1,0 +1,3 @@
+    "knex": "knex --knexfile ./server/db/knexfile.js",
+    "build:server": "npm run knex -- migrate:latest",
+    "dev": "run-p dev:client",
