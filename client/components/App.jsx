@@ -14,7 +14,7 @@ function App (props) {
 
   return (
     <>
-      <div className='app'>
+      <div className='app relative'>
         <Header />
         <WordOfDay />
         <Form />
